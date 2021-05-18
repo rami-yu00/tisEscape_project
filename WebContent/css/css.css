@@ -1,0 +1,438 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+
+* {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size:14pt;
+	background-color:rgba(0,0,0,0); 
+	color:#FFF;
+}
+
+body {
+	margin:0;
+	background-color:#222;
+}
+
+*:focus {
+	outline:none;
+}
+
+p {
+	background-color:rgba(0,0,0,0); 
+}
+
+.footerp {
+	background-color:rgba(0,0,0,0.3);
+	padding:5px;
+}
+
+.footerp > text {
+	padding: 5px;
+}
+
+
+.logoimg {
+	width:400px;
+	background-color:rgba(0,0,0,0);
+}
+
+.slideimg {
+	width:100%;
+	height:100%;
+}
+
+.wrapper {
+	width:100%;
+	background-color: rgba(0,0,0,0);
+	margin:auto;
+	text-align:center;
+}
+
+.maincontainer { /* 메인 컨테이너  부동 */
+	display:flex;
+	flex-direction:column;	
+	align-items:center;
+	justify-content:center;
+	padding: 30px 0px;
+	background-color: rgba(0,0,0,0);
+	margin:auto;
+	text-align:center;
+}
+
+.noticegroup {
+	background-color: rgba(0,0,0,0);
+	width:800px;
+	display:flex;
+	justify-content:space-around;
+	align-content:space-around;
+}
+
+.noticebox { /* index화면 공지사항 */
+	background-color: rgba(0,0,0,0);
+	width:150px;
+	min-height:200px;
+	display:inline-block;
+	border: 2px solid #990000;
+	border-radius: 10px;
+	margin: 5px 0;
+	padding:10px;
+}
+
+.titlebox { /* index화면 제목 */
+	font-size:30pt; !improtant;
+	color:#990000; !improtant;
+	background: rgba(0,0,0,0);
+	font-family: 'East Sea Dokdo', cursive;
+	font-weight: bold;
+	margin:20px auto;
+}
+
+.noticeimg { /* 공지사항 이미지 */
+	width: 80%;	
+}
+/*보람 추가*/
+#headers{position: fixed;  z-index: 50000;width: 100%; }
+#headers + div, #headers + section{ padding-top: 200px; }
+/*보람 추가 END*/
+
+/*header.jsp전용*/
+.headerbg {
+	
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size:14pt;
+	background:url('../images/bg.jpg') center 30% no-repeat;
+	background-size:cover;
+	height:200px;
+	display: flex;
+	flex-direction:column;
+	justify-content:space-around;
+	
+}
+
+.logocontainer {
+	width:100%;
+	background-color:rgba(0,0,0,0);
+	display:flex;
+	align-content:center;
+	margin:10px auto;
+}
+
+.menubar {
+	width:100%;/*보람 추가 */
+	background-color:rgba(0,0,0,0);
+	display:flex;
+	justify-content:center;
+	margin:auto;
+	flex-direction:row;
+}
+
+.menugroup {
+	display: inline;
+	background-color:rgba(0,0,0,0);
+}
+
+#main_menu, .sub_menu, #hidden_menu, #logo_menu {
+	margin:0 auto;
+	padding:0;
+	list-style-type:none;
+}
+
+#logo_menu > .li	{
+	text-align:center;
+	background-color:rgba(0,0,0,0);
+}
+
+#main_menu > li	{
+	float:left;
+	background-color:rgba(0,0,0,0);
+}
+
+#hidden_menu > li	{
+	float:left;
+	background-color:rgba(0,0,0,0);
+}
+
+#main_menu > li > a, #hidden_menu > li > a {
+	font-size:14pt;
+	font-weight:bold;
+	display:block;
+	padding:10px 15px;
+	text-align:center;
+	text-decoration:none;
+	background-color:rgba(0,0,0,0);
+	color:#222222;
+}
+
+#hidden_menu > li > a {
+	cursor: default;
+}
+
+#main_menu > li > a:hover {
+	color: #990000;
+	background-color:rgba(34,34,34,0.2);
+}
+
+.sub_menu {
+	position: absolute;
+	background:#222222;
+	opacity:0;
+	visibility:hidden;
+}
+
+.sub_menu > li > a	{
+	display:block;
+	padding:10px 15px;
+	text-align:center;
+	font-size:12pt; 
+	text-decoration:none;
+}
+
+.sub_menu > li > a:hover {
+	color: #990000;
+}
+
+#main_menu > li:hover .sub_menu {
+	opacity:1;
+	visibility:visible;
+}
+
+li_hidden, li_hidden > a:hover {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+ul {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+
+
+/*footer.jsp전용*/
+.footerbg {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size:14pt;
+	background:url('../images/footerbg1.jpg') center 40% no-repeat;
+	padding: 20px;
+	background-size:cover;
+	text-align:center;
+	display:flex;
+	justify-content:space-between;
+}
+
+.footerbox {
+	width:100%;
+	padding:10px;
+	background-color: rgba(0,0,0,0);
+	display:inline-block;
+}
+
+.footercontainer { /* 메인 컨테이너  부동 */
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	border-radius: 10px;
+	background-color: rgba(0,0,0,0);
+	margin:0 auto;
+}
+
+.logintable {
+	margin:auto;
+	text-align: center;
+	color:#990000;
+}
+
+.loginlable {
+	width: 100px;
+}
+
+.defaultbutton {
+	border:none;
+	margin: 20px;
+	color:#990000;
+}
+
+.pagebutton {
+	border:none;
+	padding: 5px;
+	color:#FFFFFF;
+	width: 40px;
+}
+
+.pageselectedbutton {
+	border:none;
+	padding: 5px;
+	color:#990000;
+	width: 40px;
+}
+
+.logintext {
+	border:1px solid #990000;
+	width:300px;
+	padding:10px;
+	color:#FFFFFF;
+	border-radius:5px;
+	}
+
+.searchtext {
+	border:none;
+	border-bottom:1px solid #990000;
+	width:300px;
+	padding:5px;
+	color:#FFFFFF;
+	}
+	
+.searchselect {
+	border:none;
+	-webkit-appearance: none;
+	width:100px;
+	text-align-last:center;
+}
+
+.deletebutton {
+	border:none;
+	margin: 5px;
+	color:#990000;
+	background-color:rgba(0,0,0,0);
+}
+
+.deletebutton:hover {
+	color:#FFFFFF;
+	background-color:rgba(0,0,0,0);
+}
+
+.reserveth {
+	height:50px;
+	border-bottom:2px dashed #990000;
+	padding:5px;
+	color:#990000;
+}
+
+.reservetd {
+	border-bottom:1px solid #666666;
+	background-color:rgba(0,0,0,0);
+	font-size:12pt;
+	text-align: center;
+	padding:5px;
+}
+
+.reservetd1 {
+	border-bottom:1px solid #666666;
+	background-color:rgba(0,0,0,0);
+	font-size:12pt;
+	text-align: left;
+	padding:5px;
+}
+
+.reservetr:hover {
+	background-color: #404040;
+}
+
+.reservepage {
+	font-size:14pt;
+	text-align: center;
+	padding:10px;
+}
+
+.reservesearch {
+	font-size:12pt;
+	text-align: center;
+}
+
+.reservetable {
+	margin:auto;
+	text-align: center;
+}
+
+.qnatable {
+	border: 1px;
+	width: 40vw;
+	margin:auto;
+	text-align: left;
+}
+
+.qnath1 {
+	width: 100%;
+	height: 3rem;
+}
+
+.qnatd1 {
+	width: 100%;
+	height: 1rem;
+}
+
+.qnatd2 {
+	width: 100%;
+	height: 1rem;
+	font-size: 0.8rem;
+}
+
+.qnatd3 {
+	width: 100%;
+}
+
+.qnahr {
+	width: 40vw;
+	border : 0;
+	background-color: #900;
+	height: 2px;
+	margin: 2rem 0;
+}
+
+.qnatext1 {
+	border: 0;
+}
+
+.qnatext2 {
+	border: solid 1px #900;
+}
+
+.qnatext3 {
+	border: 0;
+	border-bottom: solid 1px #900;
+}
+
+@media (max-width:800px){
+	
+* {
+	max-width: 800px;
+
+}
+
+.noticegroup {
+	background-color: rgba(0,0,0,0);
+	width:100%;
+	height:100%;
+	display:flex;
+	justify-content:space-around;
+	align-content:space-around;
+}
+	
+.noticebox {
+	background-color: rgba(0,0,0,0);
+	width:30%;
+	min-height:200px;
+	display:inline-block;
+	border: 2px solid #990000;
+	border-radius: 10px;
+	margin: 5px 0;
+	padding:5px;
+}
+
+.menubar{
+	width: 550px;
+}
+/*보람 추가*/
+#headers + div, #headers + section{ padding-top: 180px; }
+.headerbg {
+	height:180px;
+/*보람 추가 END*/
+}
+
+.footercontainer {
+	flex-direction:column;
+}
+
+.footerbox {
+	display:block;
+}
+} /*media end*/

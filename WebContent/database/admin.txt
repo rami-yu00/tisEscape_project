@@ -1,0 +1,12 @@
+drop table admin;
+
+create table admin (
+adminid varchar2(10) primary key,
+adminpwd varchar2(10) not null
+);
+commit;
+
+insert into admin values('admin', 1234);
+commit; 
+
+select * from admin;

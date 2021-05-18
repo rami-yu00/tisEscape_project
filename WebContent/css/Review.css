@@ -1,0 +1,51 @@
+@charset "UTF-8";
+*:focus{outline: none;}
+header{width:100%; height: 150px; background: #222;}
+body{background: #222;}
+.reviewList{overflow:hidden; padding:5%; float:left; width: 90%; background: #222;}
+#wrap{width:1200px; min-width:480px; margin: 0 auto;}
+footer{clear: both; width: 100%; height: 40px; background: #222;}
+a{color: white; text-decoration: none; font-size: 25px;}
+a::selection{font-size: 30px;}
+.section_top {padding:0; width:100%; display: flex;  height: 250px; background-size: cover; background-position: center center; background-repeat: no-repeat;}
+.h1_top,.span_top{color:#990000; !improtant; font-family: 'East Sea Dokdo', cursive; margin-left: -300px; background-color:rgba(0,0,0,0);}
+.h1_top {font-size:80px; font-weight:normal; margin-top:30px; margin-bottom:20px;}
+.span_top{font-size: 60px; margin-top:10px;}
+#ThemeList{height: 1300px;}
+.div_rtTheme{height: 400px; width: 100%; color: white; font-size: 25px;
+vertical-align: middle; background: #777; padding: 10px;}
+.div_top{padding:0; margin: 0 auto; float:flex; position: relative; background-color:rgba(0,0,0,0);}
+.div_rtImg{width: 45%; height: 100%; float: left; background-color:rgba(0,0,0,0);}
+.div_rtTitle{width: 45%; height:10%; float: left; font-weight:bold;  margin-left: 40px; margin-top: 10px; background-color:rgba(0,0,0,0);}
+.div_rtRating{width: 45%; height:10%; float: left; margin-left: 40px; margin-top: 10px; background-color:rgba(0,0,0,0);}
+.div_rtDifficulty{width: 45%; height:10%; float: left; margin-left: 40px; margin-top: 10px; background-color:rgba(0,0,0,0);}
+.div_rtHeadcount{width: 45%; height:10%; float: left; margin-left: 40px; margin-top: 10px; border-bottom: 2px solid #900; background-color:rgba(0,0,0,0);}
+.div_rtContent{font-size:15px; width: 45%; height:45%; float: left; margin-left: 55px;  margin-top: 10px; background-color:rgba(0,0,0,0);}
+.div_rvform{width:100%; height:150px; margin-top: 30px;}
+.div_radio{width: 100%; height: 20px;}
+#div_rvInsert{margin-top: 70px;}
+/*================================form===============================*/
+.div_rvform>form{ font-size: 20px; color: white; font-weight: bold;}
+.form_review{border:none; border-bottom:1px solid #900; width: 70%; height: 100px; margin-top: 10px;}
+.form_button{width:20%;  height: 80px; margin-left: 3px; box-shadow: 4px 4px 4px 4px black; background:#777;
+-webkit-appearance: none;-moz-appearance: none;appearance: none; font-weight:bold; font-size:20px; 
+text-align: center; border: none;cursor: pointer; transition: 0.5s; border-radius: 8px;}
+.form_button:hover{font-size: 20px;color:#900; box-shadow: none;}
+.form_name,.form_num{border:none; border-bottom:1px solid #900; width:300px; height: 20px; padding:5px;}
+/*================================img===============================*/
+.img_theme{width: 100%; height: 100%;}
+.img_star{width: 30px; height: 30px; float: left; margin-top: 3px; margin-left: 15px; background-color:rgba(0,0,0,0);}
+.img_man{width: 30px; height: 30px; float: left; margin-top: 3px; margin-left: 15px; background-color:rgba(0,0,0,0);}
+.img_difficulty{width: 30px; height: 30px; float: left; margin-top: 3px; margin-left: 15px; background-color:rgba(0,0,0,0);}
+/*================================table===============================*/
+.rvTable{width: 100%; color: white; text-align: center; margin-top: 30px; margin-left: 8px;}
+.font_rtContent_title{font-size: 30px; font-weight: bold; background-color:rgba(0,0,0,0);}
+.font_rtContent{font-size: 18px; background-color:rgba(0,0,0,0);}
+th,td{height:50px; border-bottom: 1px solid white; padding:5px; text-align: center;}
+th{border-bottom:2px dashed #900; font-size: 30px; color:#900;}
+td{height:50px; border-bottom:1px solid #666; font-size: 20px; color:#FFF; margin-top: 30px; background-color:rgba(0,0,0,0);}
+/*================================radio_Star===============================*/
+.span_starRating { width: 100px; }
+.span_starRating, .span_starRating span { display:inline-block; height:20px; overflow: hidden; background: url(./images/starss.svg)no-repeat; background-size: 100px; }
+.span_starRating span{ background-position:left bottom; line-height:0; vertical-align: top; }
+#span_star{width: 100%;}

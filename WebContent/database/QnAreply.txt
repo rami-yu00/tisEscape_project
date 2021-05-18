@@ -1,0 +1,24 @@
+drop sequence  QnAreply_seq ;
+drop table QnAreply;  
+commit ; 
+
+create sequence  QnAreply_seq 
+start  with  1 
+increment  by  1  ;
+
+create table QnAreply (     
+replyNum number(6),
+replyWriter varchar2(30),
+replyContent varchar2(3000),
+replyDate date,
+QnAno number(6) not null
+);
+commit ;
+
+alter table QnAreply  add   constraint  QnAno_fk
+foreign key(QnAno) references QnA(num) on delete cascade;
+
+insert into QnAreply values(QnAreply_seq.nextval, 'apple', 'apple111', sysdate, 1);
+insert into QnAreply values(QnAreply_seq.nextval, 'php', 'apple222', sysdate, 1);
+insert into QnAreply values(QnAreply_seq.nextval, 'aaa', 'apple333', sysdate, 1);
+commit;

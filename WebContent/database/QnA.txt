@@ -1,0 +1,29 @@
+drop sequence QnA_seq;
+
+CREATE SEQUENCE QnA_SEQ
+START WITH 1
+INCREMENT BY 1;
+
+drop  table QnA  ;
+
+create  table  QnA (      
+num number primary key,
+name varchar2(30) not null,
+pwd varchar2(10) not null,
+title varchar2(60) not null,
+wdate date default sysdate,
+hit number default 0,
+content varchar2(900)
+); 
+
+commit ;
+select  *  from  QnA ;
+
+insert  into  QnA   values(QnA_seq.nextval, 'zero', '1234', 'zero', sysdate, 0 , 'a' ) ;
+insert  into  QnA   values(QnA_seq.nextval, 'aaa',  '1234', 'bbb', sysdate, 0 , 'a' ) ;
+insert  into  QnA   values(QnA_seq.nextval, 'zc',  '1234', 'zq', sysdate, 0 , 'z' ) ;
+insert  into  QnA   values(QnA_seq.nextval, 'ac',  '1234',  'wb', sysdate, 0 , 'x' ) ;
+insert  into  QnA   values(QnA_seq.nextval, 'zd',  '1234', 'zee', sysdate, 0 , 'c' ) ;
+insert  into  QnA   values(QnA_seq.nextval, 'ad',  '1234',  'brr', sysdate, 0 , 'v' ) ;
+
+commit;

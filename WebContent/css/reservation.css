@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR:wght@300;400;500;600&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Gugi&family=Sunflower:wght@300;500;700&display=swap');
+/*===========[ Default Style Reset ]=========== 20110126 License: none (public domain) | http://meyerweb.com/eric/tools/css/reset/ v2.0  */
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, 
+	blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+	em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup,
+	tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form,
+	label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, figure, figcaption, footer,
+	header, hgroup, menu, nav, output, ruby, section, summary, time, mark,
+	audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+  html, body{height: 100%;}
+  
+	
+	/* HTML5 display-role reset for older browsers */
+	article, aside, details, figcaption, figure, footer, header, hgroup,
+	menu, nav, section { display: block; }
+	body { line-height: 1; }
+	ol, ul { list-style: none; }
+	blockquote, q { quotes: none; }
+	blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+	table { border-collapse: collapse; border-spacing: 0; }
+	a, a:link , a:visited ,a:active{ text-decoration: none; color: inherit; }
+	input:-webkit-autofill {
+   -webkit-box-shadow: 0 0 0 1000px transparent inset; }
+	
+/*=============[ COMMON ]=============================================================== */ 
+	:root{ /*------ ROOT ------/ ex) color: var(--div-main-color);  /*/
+		--warp-width: 1000px;
+		--section-width: 100%;
+		
+		--font-do-hyeon: 'Do Hyeon', sans-serif;
+		--font-black-han-sans: 'Black Han Sans', sans-serif;
+		--font-noto-serif: 'Noto Serif KR', serif;
+		--font-special-elite: 'Special Elite', cursive;
+		--font-gothic-a1:'Gothic A1', sans-serif;
+		--font-gugi:'Gugi', cursive;
+		--font-sunflower:'Sunflower', sans-serif;
+		--top-font-color-h1: #e7e2e2;
+		--top-font-color-h1-ani: #bf7c7cde;
+		--top-font-color-span: #b81515bf;
+		--font-color-white: #e7e2e2;
+		--df-dark: #222;
+		--df-light: #ccc;
+		--dark-red: #a40d0d;
+		--input-dark: #383636;
+		--df-grey: #9f9a9a91;
+		--df-light-grey: #b7b3b3;
+		--md-hr-color: #c3c2c45e;
+		--text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+		--text-shadow-span: 0 4px 4px rgba(10, 0, 0, 0.3);
+		--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace ;
+	
+	}/* root end */
+	
+	/* LODING LAYAR - Style /*/
+	#loading { width: 100vw; height: 100vh; top: 0; left: 0; position: fixed; display: block; opacity: 0.7; background-color: rgba(0,0,0,0.6); z-index: 200; text-align: center; }
+	#loading .icon_ld{  position: absolute; top: 50%; left: 50% ;transform: translate(-50%, -50%); }
+	#loading .icon_ld span{ font-size: 50px; color: #fff; }
+
+	/*   COMMON  - common /*/
+	body{ background-color:#111;  }
+	input:focus {outline:none;}
+	.wrap { width: 1000px; margin: 0 auto; position: relative; }
+	section{ width: 100%; margin: 0 auto; }
+	.tm_box { }
+	/* media */
+		@media (max-width:976px){
+		.wrap { width: 800px; margin: 0 auto; position: relative; }
+		.rsv_swrap_item1 { width: 85%;}
+		.swrap { width:800px ;margin: 0 auto; }
+		/* .tm_box { width: 800px; } */
+		.lb_nbsp {padding-right: 18%;}
+		.rsv_stable tr th { padding: 10px 0; text-align: left; min-width: 150px; font-size: 1.2rem;}
+		.rsv_stable tr td{ padding: 10px 0; width: 250px; display: inline-flex;  font-size: 1.2rem; position: relative; }
+  	.rsv_cnf_mid_wrap .rsv_cnf_mid_ntc{ padding:6px 0 45px 20px; height:  auto; }
+	}
+	@media(max-width:799px){
+		.wrap { width: 640px ; margin: 0 auto; position: relative; }
+		.rsv_swrap_item1 { width: 85%;}
+		.swrap { width:640px ;margin: 0 auto; }
+		.tm_box { flex-flow: column; }
+		.rsv-main > .wrap > div:nth-child(1){ display: flex; flex-wrap: wrap;}
+		.rsv-main .rsv_form { display: inline-flex;}
+		.tm_box_picker{ justify-content: center;}
+		.lb_nbsp {padding-right: 10%;}
+		.rsv_stable tr th { padding: 10px 0; text-align: left; min-width: 150px; font-size: 1.2rem;}
+		.rsv_stable tr td{ padding: 10px 0; width: 200px; display: inline-flex;  font-size: 1.2rem; position: relative; }
+	  .rsv_cnf_mid_wrap .rsv_cnf_mid_ntc{ padding:4px 0 45px 0px; height:  auto; }
+	}
+	@media(max-width: 639px){
+		.wrap { width: 500px ; margin: 0 auto; position: relative; }
+		.rsv_swrap_item1 { width: 85%;}
+		.swrap { width: 500px;margin: 0 auto; }
+		.tm_box { flex-flow: column; }
+		.rsv-main > .wrap > div:nth-child(1){ display: flex; flex-wrap: wrap;}
+		.rsv-main .rsv_form { display: flex ;}
+		.tm_box_picker{ justify-content: center;}
+		.rsv_stable tr th { padding: 10px 0; text-align: left; min-width: 70px; font-size: 1.2rem;}
+		.rsv_stable tr td{ padding: 10px 0; width: 200px; display: inline-flex;  font-size: 1.2rem; position: relative; }
+		.rsv_cnf_mid_wrap .rsv_cnf_mid_ntc{ padding:4px 0 80px 10px; height:  auto; }
+}
+@media (max-width: 414px){
+		.lb_nbsp {padding-right: 8%;}
+		.wrap { width: 410px ; margin: 0 auto; position: relative; }
+		.rsv_swrap_item1 { width: 85%;}
+		.swrap { width: 410px;margin: 0 auto; }
+		.tm_box { flex-flow: column; }
+		.rsv-main > .wrap > div:nth-child(1){ display: flex; flex-wrap: wrap;}
+		.rsv-main .rsv_form { display: flex ;}
+		.tm_box_picker{ justify-content: center;}
+		.rsv_stable tr th { padding: 10px 0; text-align: left; min-width: 70px; font-size: 1.2rem; display: none;}
+		.rsv-main .rsv_stable .input_bg{background-color: var(--input-dark); border: none; padding: 8px; flex: 1 1 auto; font-size: 14px; position: absolute; left: -26px;  top: -8px;}
+		.rsv_stable tr td{ padding: 10px 0; width: 150px; display: inline-flex;  font-size: 1.2rem; position: relative; }
+		.rsv_stable tr .td_phone input, .td_phone select, .td_phone option { padding: none; }
+		.td_phone select {width: 70px;}
+}
+
+	@media (min-width:978px){
+		.wrap { width: 1000px; margin: 0 auto; position: relative; }
+		.rsv_swrap_item1 { width: 85%;}
+		.swrap { width:1000px ;margin: 0 auto; }
+		.rsv-main .rsv_form { display: inline-block; float: left; }
+		.lb_nbsp { padding-right: 29%;}
+		.rsv_stable tr th { padding: 10px 0; text-align: left; min-width: 150px; font-size: 1.2rem;}
+		.rsv_stable tr td{ padding: 10px 0; width: 250px; display: inline-flex;  font-size: 1.2rem; position: relative; }
+		.rsv_stable tr .td_phone input, .td_phone select, .td_phone option { padding: 8px; }
+		.rsv_cnf_mid_wrap .rsv_cnf_mid_ntc{ padding:6px 0 45px 20px; height:  auto; }
+		
+	}
+	
+		/* 각요소의 너비 값 계산 *
+     (요소의 너비/콘텐츠 전체를 감싸는 요소의 너비)*100
+     em,rem = 글자크기(px)/16px
+ * 미디어쿼리 구문 *
+  @media [only|not] 미디어유형 [and조건] * [and조건]
+  ex) 뷰포트의 너비가 600px 이상, 959px 이하일때 
+  -> @media all (min-width:600px) and (max-width:959px){ }
+  * 미디어유형 *
+   all : 모든미디어
+   screen : 컴퓨터스크린 (스마트폰 스크린 포함)
+
+ */
+	
+	
+	/*   COMMON  - font /*/
+	.rsv-top > .wrap > h1, .rsv-nav .wrap a, .rsv_form label, .rsv_form input, .rsv_form option, .rsv_form + span, .tm_title span
+	, .tm_box_picker div, .md_con_top h2, .md_rsv_submit_btn, .md_rsv_close_btn, .md_rsv_save_submit_btn, .rsv_save_rsult p { font-family: var(--font-gothic-a1); }
+	.rsv-top > .wrap > h1, .rsv-nav .wrap a, .rsv_form label, .rsv_form + span, .tm_title span:nth-child(1),
+	.md_con_top, .md_con_mid, .md_rsv_table .input_bg, .md_rsv_table select, .md_rsv_table input[readonly], 
+	.md_con_btm, #rsv_ntc_check + label, .md_rsv_submit_btn, .md_rsv_save_submit_btn, .rsv_save_rsult p:not(:last-child) { color : var(--top-font-color-h1); }
+	.rsv-top > .wrap > h1, .rsv-nav .wrap a, .md_con_top h2, .md_rsv_submit_btn, .md_rsv_close_btn { text-shadow: var(--text-shadow); }
+	.tm_box_picker div span:nth-child(1), .md_con_top h2 {font-weight: 600;}
+	.tm_title span, .tm_box_picker div span:nth-child(2), .md_rsv_submit_btn, .md_rsv_close_btn, .md_rsv_save_submit_btn, .rsv_save_rsult p:not(:last-child)  { font-weight: 500; }
+/*===[ reservation.jsp ][ 예약하기 : reservation.do ]========================================*/
+
+	/*   top   */
+	.rsv-top { display: flex;  height: 250px; background-size: cover; background-position: center center; background-repeat: no-repeat; }
+	.rsv-top > .wrap > h1{ position: relative; top:140px; font-weight: 600 ; font-size: 40px; text-shadow: var(--text-shadow);}
+	.rsv-top > .wrap > span{ position: relative; top:140px; font-size:18px; font-family: var(--font-special-elite); color: var(--top-font-color-span); text-shadow: var(--text-shadow-span); }
+
+	@keyframes slow_shake { from { transform: translateX(1px); text-shadow: 0 0 3px rgba(30, 30, 0, 30); }to { transform: translateX(2px); text-shadow: -1px -2px 0 rgba(30, 30, 0, 0.411); color: var(--top-font-color-h1-ani); } }	
+	.light{ opacity: 0.30; animation: flashText .01s ease-out alternate infinite; }
+	.wrap h1 {position: relative; display: inline-block; }
+	@keyframes flashText { to { opacity: 1; } }
+
+	/*    rsv-nav    */
+	.rsv-nav { background-color: #111; }
+  .rsv-nav .wrap{ display: flex;  }
+	.rsv-nav .wrap a { text-align: center; color: #fff ; flex: 0 0 50%;  padding: 20px 0 20px 0px; font-size: large; z-index: 100; }	
+
+	
+	/*    main    */
+	.rsv-main { background-color:#222; padding-bottom: 30px;}
+	.rsv-main > .wrap > div:nth-child(1) { display: flex; justify-content: space-between; align-items: center; padding: 23px 0 11px; }
+	.rsv-main .rsv_form { font-size: large; }
+	.rsv-main .rsv_form input, .rsv_form select{ padding: 6px; font-size: 16px; border-radius: 2px; color:#222; font-weight: 500; background-color: #fff; }
+	.rsv-main .rsv_form input { width: 200px; }
+	.rsv-main .rsv_form select { width: 216px; }
+	.rsv-main .rsv_form option{ color: #222;}
+	.rsv-main .rsv_form span { display: inline-block; float: right; padding: 6px; font-size: large; }
+	
+	.tm_wrap { margin-top: 10px; }
+	.tm_title { padding: 2px 0; }
+	.tm_title span:nth-child(1){float: left; font-size: 16px; }
+	.tm_title span:nth-child(2){float: right; line-height: initial; color: var(--df-light-grey); }
+	.tm_title::after{ content: ' '; border-bottom: 1px solid var(--md-hr-color); display: block; margin: 0 auto; margin-top: 2.2rem; }
+	
+	.tm_box {width: 100%;  display: flex; align-items:center;  padding: 10px 0 10px 0;  }
+	.tm_box_img { margin: 0 10px; }
+	.tm_box_img > img{ border-radius: 2px; }
+	.tm_box_picker { flex: 0 0 75%; display: flex; flex-wrap: wrap;  }
+	.tm_box_picker a{ display:block; width:178px; line-height: normal; margin: 1px 3px ; padding: 8px 0; background-color: var(--df-light); box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%); border-radius: 2px; }
+	.tm_box_picker a span { display:block; text-align: center; color: #222;}
+	.tm_box_picker a span:nth-child(1) { font-size: 24px;}
+	.tm_box_picker .rstate{ background-color: var(--input-dark);}
+	
+	/*    rsv modal    */
+	#md_rsv_next{ position: fixed; top:0 ; left:0; width:100%; height: 100%; margin: 0 auto; z-index:60000; }
+	#md_rsv_next .md_lay{  position: absolute; background-color: rgba(0,0,0,0.6); width:100%;  height: 100%; }
+	#md_rsv_next .md_con{ width: 655px; height: 635px; position: absolute; top:40%; left:50%; transform: translate(-50%,-40%); box-sizing: border; z-index:110; border-radius: 6px;  background-color:var(--df-dark); box-shadow: 0 10px 20px rgb(0 0 0 /38%), 0 6px 6px rgb(0 0 0 /10%); }
+	#md_rsv_next .md_con input:: -ms-clear{ display:none;} 
+	 
+	.md_con_top{ margin-bottom: 0.5rem; border-radius: 3px 3px 0 0 ; background-color: var(--dark-red); padding: 2.2rem 0; font-size: 1.8rem; }
+	.md_con_mid_pd, .md_con_mid_top{ padding: 0 30px; width: initial; }
+	.md_con_mid{ display: flex; align-items:center; box-sizing: border-box; border-bottom: 1px solid var(--md-hr-color);  }
+	
+	.md_con_mid .md_con_img{ width: 150px; height: 200px; overflow: hidden; display: flex; justify-content: center; align-items: center;  }
+	.md_con_mid .md_rsv_table{ flex: 0 0 65% ; margin-left: 20px; font-size: 1.3rem;}
+	.md_con_mid .md_rsv_table tr{height: 40px; }
+	.md_con_mid .md_rsv_table tr:not(:last-child){ border-bottom: 1px solid var(--md-hr-color); }
+	.md_con_mid .md_rsv_table tr th{ padding: 10px 0;  text-align: left; width: 36%;}
+	.md_con_mid .md_rsv_table tr td{ padding: 10px 0; }
+	.md_con_mid .md_rsv_table .input_bg, .md_rsv_table select{ font-size: 1.2rem; width: 96.5%; background-color: var(--input-dark); border: none; padding: 3px;}
+	.sname_lb { text-align: center; font-family: var(--font-gugi); line-height: 12px; border-radius: 100%; font-size: 12px; border: 2px solid #ca1414; color: #ca1414; width: 12px; height: 12px; position: absolute; top: 40.1%; left: 45.50%; display: none; }
+	.sphone_lb{ text-align: center; font-family: var(--font-gugi); line-height: 12px; border-radius: 100%; font-size: 12px; border: 2px solid #ca1414; color: #ca1414; width: 12px; height: 12px; position: absolute; top: 47.9%; left: 45.50%; display: none; }
+	
+	.md_con_mid	.md_rsv_table	input[readonly]{ background-color: transparent; cursor: default; width: 96.5%; border: none; padding: 3px; font-size: 1.3rem; }
+	.md_con_mid .md_rsv_tb_date { display: inline-flex; }
+	.md_con_mid .md_rsv_tb_date > #testinput{flex: 0 0 35%; }
+	.md_con_mid .md_rsv_tb_phone { display: inline-flex; }
+	.md_con_mid .md_rsv_tb_phone select { width: 70px; }
+	.md_con_mid .md_rsv_tb_phone select, .md_rsv_tb_phone input {  }
+	.md_con_mid .md_rsv_tb_price{ display: inline-flex; align-items: center; }
+	.md_con_mid .md_rsv_tb_price > input {flex: 0 0 27% }
+	.md_con_mid	.md_rsv_table .md_pwd_td{ height: 45px; display: flex; flex-wrap: wrap; width: unset; align-items: initial; }
+	.md_con_mid	.md_rsv_table input[name="pwd"]{ flex: 0 0 auto; }
+	
+	.md_red_lb { color: var(--dark-red) ; font-size: 0.9rem; line-height: 1rem; }
+	.md_red_lb.md_td_p{ line-height: 1; padding-top: 6px; }
+	.md_con_btm div:nth-child(1) { padding: 5px 0; }
+	
+	.md_rsv_ntc{  border:1px solid var(--md-hr-color); padding: 10px 5px; overflow-y : scroll; overflow-x : hidden;  height: 70px; font-size: .3rem; line-height: 1rem; }
+	.md_rsv_ntc pre{ color: var(--df-grey);  white-space:pre-wrap; } 
+	.md_con_btm .md_rsv_ntc_check { text-align: center;  line-height: 2.5rem;}
+	.md_con_btm div:nth-child(4) { text-align: right; }
+	.md_con_btm div:nth-child(4)::before, .rsv_sbtm_submit::before{content: ' '; border-bottom: 1px solid var(--md-hr-color); display: block; margin: 0 auto; margin-bottom:1rem;}
+	
+	.md_con_btm .md_rsv_submit_btn { margin-right: 8px;  background-color: var(--dark-red);  }
+	.md_con_btm .md_rsv_submit_btn, .md_rsv_close_btn {  border-radius: 2px; box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%); width : 100px; padding: 12px 0; border:none; }
+  .md_rsv_close_btn { background-color: #fff; color:#222;}
+
+/*===[ reservationView0.jsp ][ 실시간예약 -  03.예약정보확인 : reservationView.do ]========================================*/
+	.md_con2{ width: 100%; height:100%; position: absolute; top:40%; left:50%; transform: translate(-50%,-40%); box-sizing: border; z-index:110; border-radius: 6px;  background-color:var(--df-dark); box-shadow: 0 10px 20px rgb(0 0 0 /38%), 0 6px 6px rgb(0 0 0 /10%); }
+	
+	.rsv_save_rsult {padding: 18px 0 12px;}
+	.rsv_save_rsult p { line-height: 3rem;}
+	.rsv_save_rsult p:not(:last-child){ color: #fff; font-size: 18px;  }
+	.rsv_save_rsult p input{ color:#222; width: 180px; padding: 3px; font-size: 20px; text-align: center; border-radius: 2px; background-color: #fff;  font-weight: 600; }
+	.rsv_smg{ margin-bottom: 10px; }
+	.md_rsv_save_table {flex: 0 0 100%; }
+	.md_rsv_save_table tr{ height: 3.0rem; font-size: 1.3rem;}
+	.md_rsv_save_table tr:not(:last-child){ border-bottom: 1px solid var(--md-hr-color); }
+	.md_rsv_save_table tr th{ padding: 5px 0;  text-align: left; width: 36%;}
+  .md_rsv_save_table tr td{  padding: 5px 0; }
+	
+	.rsv_sbtm_ntc{ margin-bottom: 10px; }
+	.md_rsv_save_submit_btn { float: right; border-radius: 2px; box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%); width : 100px; padding: 12px 0; border:none; background-color: var(--dark-red); text-shadow: var(--text-shadow); }
+
+/*===[ reservationSearch.jsp ][ 예약확인 페이지 : reservationSerch.do ]========================================*/
+	
+	.swrap.top_pd{ padding-top: 30px; }
+	.rsv_swrap{  padding-top: 20px; color: var(--top-font-color-h1);}
+	
+	.rsv_swrap_item1 { width: 80%; margin: 0 auto;}
+	.rsv_srst{ overflow-y: scroll; height:365px; width: 71%; margin: 0 auto; box-shadow:inset 3px 14px 15px -11px rgb(0 0 0 / 15%); border-radius:4px; margin-top: 25px;margin-bottom: 8px; background-color: #ffffff17; padding: 25px 0 10px 0; }
+	.rsv_stable{ margin: 0 auto;}
+	
+	
+	.rsv_stable tr .td_phone { display: inline-flex;}
+	.rsv_stable tr .td_phone input, .td_phone select, .td_phone option{ background-color: var(--input-dark); border: none;  flex: 1 1 auto; font-size: 1.2rem; width: 100%; color: var(--top-font-color-h1);}
+	.rsv-main .rsv_stable tr{ height: 30px; }
+	.rsv-main .rsv_stable tr:not(:last-child){ border-bottom: 1px solid var(--md-hr-color); }
+	.rsv-main .rsv_stable tr td{  padding: 5px 0; }
+	
+	.rsv-main .rsv_stable .rscode_lb2{
+	  line-height: 12px;
+    border-radius: 100%;
+    font-size: 12px;
+    border: 2px solid #ca1414;
+    color: #ca1414;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 34.9%;
+    left:-29%;
+    display: none;
+	}
+	.rsv-main .rsv_stable .sname_lb2{ text-align: center; font-family: var(--font-gugi);
+    line-height: 12px;
+    border-radius: 100%;
+    font-size: 12px;
+    border: 2px solid #ca1414;
+    color: #ca1414;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 36.7%;
+    left:-29%;
+    display: none; }
+  .rsv-main .rsv_stable .sphone_lb2{
+    line-height: 12px;
+    border-radius: 100%;
+    font-size: 12px;
+    border: 2px solid #ca1414;
+    color: #ca1414;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 40.7%;
+    left:-29%;
+    display: none;
+  }
+  
+	.rsv-main .rsv_stable .input_bg{background-color: var(--input-dark); border: none; padding: 8px; flex: 1 1 auto; font-size: 14px; }
+  .rsv-main .rsv_sbtn_con{ margin-top: 27px; }
+  .rsv-main .rsv_sbtn_con::after{ width:80%; content: ' '; border-bottom: 1px solid var(--md-hr-color); display: block; margin: 0 auto; margin-top:-4rem;  }
+  .rsv-main .rsv_sbtn_con input{ width: 110px; color: #222; font-size: 1.3rem; padding: 5px 0px; background-color: #fff; border-radius: 4px; line-height: 2.2rem; margin-bottom: -6px; }
+  .rsv-main .rsv_sbtn_con input:hover{ color: #fff; background-color: #980b0b; cursor: pointer; }
+  .rsv_sform_wrap {display: contents; border: 1px solid red;}
+  .rsv_swrap_item1 input[type="radio"]{ display: none;  }
+  .rsv_swrap_item1 input[type="radio"] + label:not(.lb_nbsp){ padding: 8px 12px; color:#c3c2c45e; cursor: pointer;}
+  .rsv_swrap_item1 input[type="radio"]:checked + label{ border:1px solid #fff; border-radius: 4px 4px 0 0 ; border-bottom: 1px solid #222; color:#fff;}
+  .rsv_swrap_item1 #search_rscode:checked ~  #rsv_search_con1{display: block;}
+  .rsv_swrap_item1 #search_rsname:checked ~  #rsv_search_con2{display: block;}
+  .rsv_scon { border-radius: 4px; text-align:center;  margin-bottom: 11px; display: none; margin-top: 11px; border: 1px solid;  width: 70%; padding: 30px 30px 60px 30px; }
+  
+  
+/*===[ reservationView.jsp ][ 예약확인출력 : reservationView.do ]========================================*/
+	.srsv_warp { border-radius: 5px; width: 80%; background-color: #222;  margin: 0 auto; }
+	#rsv_cnf .rsv_cnf_warp{ width: 600px; height:320px; position: absolute; top:50%; left:50%; transform: translate(-50%,-50%); box-sizing: border; z-index:110; border-radius: 6px;  background-color:var(--df-dark); box-shadow: 0 10px 20px rgb(0 0 0 /38%), 0 6px 6px rgb(0 0 0 /10%); }
+	#rsv_cnf .rsv_cnf_warp input:: -ms-clear{ display:none;} 
+	 
+	.rsv_cnf_top{ margin-bottom: 0.5rem; border-radius: 3px 3px 0 0 ; background-color: var(--dark-red); color:var(--df-light); padding: 12px 0; text-shadow: var(--text-shadow); font-size: 20px; }
+	
+	.rsv_cnf_mid_wrap{ padding: 0 20px; width: initial;  }
+	.rsv_cnf_top_h2{ padding: 0 36px; width: initial;  }
+	.rsv_cnf_mid{align-items: center; margin:0;  display: flex; box-sizing: border-box; color:var(--df-light);  }
+	.rsv_cnf_mid .rsv_cnf_mid_img { display: flex; justify-content: center; align-items: start; }
+	.rsv_cnf_mid .rsv_cnf_mid_table{ flex: 1 1 auto; margin-left: 20px; }
+	.rsv_cnf_mid .rsv_cnf_mid_table tr{ border-bottom: 1px solid var(--md-hr-color); }
+	.rsv_cnf_mid .rsv_cnf_mid_table tr th{ padding: 5px 0;  text-align: left; }
+	.rsv_cnf_mid .rsv_cnf_mid_table tr td{  padding: 5px 0; width: 66%; }
+	.rsv_cnf_mid_ntc div{ color: #848484b8; padding: 4px 0; font-size: 15px; }
+	.rsv_cnf_mid_ntc div:nth-child(1) pre{ white-space: break-spaces; flex: 0 0 40%; font-size: 0.5rem ; color:#d91515a3;}
+	.logo{float: left; line-height: 1.8rem;}
+	.qna_link_btn{float: right; margin-left: 12px; margin-top: 4px; padding: 8px 11px; color: #fff; background-color:  var(--dark-red); border-radius: 2px; }
+	.qna_link_btn:hover { background-color:  #a40d0d8c; cursor: pointer;}
+	
+	
+	.scrollbar
+{
+		display: none;
+	  padding: 25px 0 10px 0;
+    background-color: #ffffff17;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    height: 365px;
+    width: 71%;
+    margin: 0 auto;
+    height: 288px;
+    overflow-y: scroll;
+}
+
+.force-overflow
+{
+	min-height: 288px; 
+}
+#style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+#style-1::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: ransparent;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}

@@ -1,0 +1,330 @@
+
+
+----------------------  admininfo  -------------------------
+drop table admininfo;
+create table admininfo (
+	adminid varchar2(10) primary key,
+	adminpwd varchar2(10) not null
+);
+
+commit;
+
+insert into admininfo values('admin', 1234);
+
+select * from admininfo;
+commit; 
+
+----------------------  THEME  -------------------------
+
+set pagesize 1500
+set linesize 1500
+
+col theme for a20;
+col content for a20;
+col img for a20;
+col time for a10;
+col name for a20;
+
+
+drop table theme;
+
+create table theme( --TM00
+  tmcode varchar2(4) primary key,
+  theme varchar2(50) not null,
+  content varchar2(500) not null,
+  img varchar2(30) not null,
+  difficulty number(2) not null,
+  headcount number(2) not null,
+  price number(5) not null
+);
+
+commit;
+------------------   THEME SEQUENCE   ------------------
+drop sequence tm_seq;
+create sequence tm_seq;
+
+------------------------------------------------   THEME INSERT DATA -------------------------------------------------------------------
+insert into theme values( 'TM'||trim(to_char(tm_seq.nextval,'00')), 
+'외과병동, 독일 드레스덴',
+'2차대전중 나치의 병원 실험실을 연상케 하는 방. 나치국기, 낡은 병상 침대, 실험시설등. 가스실 철문은 잠겨있고 작은 유리창이 달려있는데 가스가 가득차서 안이 보이진 않는다. 병상 침대 위에는 더러운 개모양 인형. 벽에는 퍼즐풀이 관련되거나 관련되지 않은 과학문서들이 덕지덕지 붙어 있다.','theme1.png',2,2,20000);
+insert into theme values( 'TM'||trim(to_char(tm_seq.nextval,'00')), 
+'나이트 마켓','사람들은 혁명을 꿈꾸며 격앙돼 있다. 정부측 프락치로 오인받으면 성난 시민들에 의해 뼈와 살이 분리될 수도! 혁명 단체 일원으로 위장하여 위기를 모면하라.태국 반정부 시위 전날의 나이트마켓. 야간 시장으로 천막 아래 수산물,과일, 특산품을 파는 노천 시장 분위기. 점포천막 아래 램프가 걸려 밤을 밝히고 있다.2','theme2.png',3,3,20000);
+insert into theme values( 'TM'||trim(to_char(tm_seq.nextval,'00')),
+'대공분실, 대한민국 서울','군사정권 시절 남파 간첩으로 몰린 4명의 피의자들을 신문/취조하는 대공분실 스크린에는 “대공분실, 대한민국 서울, 1983년 2월 17일. 수사관 복귀까지 45분 이라고 쓰여 있다.','theme3.png',4,2,20000);
+insert into theme values( 'TM'||trim(to_char(tm_seq.nextval,'00')),
+'웨스트민스터 지하묘지','웨스트민스터 지하묘지에 숨겨진 보물을 찾으러 들어간 셜록홈즈. 보물은 찾았으나 탈출에는 실패하고 마는데...셜록 홈즈의 시대 웨스트민스터 사원의 석조 지하묘지.','theme4.png',2,2,24000);
+insert into theme values( 'TM'||trim(to_char(tm_seq.nextval,'00')),
+'산타 캐빈','뭔가 이상한 산타의 집. 미친 산타가 아이들을 더 이상 해치지 못하게 막아야 한다. 산타의집. 창문은 커텐으로 가리워져 있다. 통나무집. 크리스마스 트리. 낡은 피아노. 오래된 텔레비전은 지직 거리는 영상만 나오고 있다. 비디오. 벽난로. 낡은 북유럽의 따뜻한 가정집 분위기.','theme5.png',5,4,24000);
+insert into theme values( 'TM'||trim(to_char(tm_seq.nextval,'00')),
+'츠쿠요미 신사','임진왜란 때 일본으로 끌려간 조선의 도공. 일본의 국보를 빚는다. 자객을 피해 국보를 찾아내고 도공의 소원을 들어준다.','theme6.png',1,2,24000);
+
+select * from theme;
+commit;
+
+------------------  review   ------------------
+drop table review;
+commit;
+
+DROP TABLE REVIEW ;
+create table review(
+	theme varchar2(50) not null,
+	rscode varchar2(15) NOT NULL,
+	name varchar2(50) not null,
+	content varchar2(400) not null,
+	rating number(2) not null
+);
+commit;
+
+------------------------------------------------  REVIEW INSERT DATA -------------------------------------------------------------------
+
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',5);
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',4);
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',3);
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',2);
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',5);
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',4);
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',4);
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',3);
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',3);
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',4);
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',5);
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',2);
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',1);
+insert into review values('외과병동, 독일 드레스덴',23,'길똥','재밋당',5);
+
+insert into review values('나이트 마켓',23,'길똥','재밋당',5);
+insert into review values('나이트 마켓',23,'길똥','재밋당',4);
+insert into review values('나이트 마켓',23,'길똥','재밋당',3);
+insert into review values('나이트 마켓',23,'길똥','재밋당',4);
+insert into review values('나이트 마켓',23,'길똥','재밋당',4);
+insert into review values('나이트 마켓',23,'길똥','재밋당',1);
+insert into review values('나이트 마켓',23,'길똥','재밋당',1);
+insert into review values('나이트 마켓',23,'길똥','재밋당',1);
+insert into review values('나이트 마켓',23,'길똥','재밋당',2);
+insert into review values('나이트 마켓',23,'길똥','재밋당',4);
+insert into review values('나이트 마켓',23,'길똥','재밋당',5);
+
+insert into review values('대공분실, 대한민국 서울',23,'길똥','재밋당',5);
+insert into review values('대공분실, 대한민국 서울',23,'길똥','재밋당',4);
+insert into review values('대공분실, 대한민국 서울',23,'길똥','재밋당',4);
+insert into review values('대공분실, 대한민국 서울',23,'길똥','재밋당',4);
+insert into review values('대공분실, 대한민국 서울',23,'길똥','재밋당',3);
+insert into review values('대공분실, 대한민국 서울',23,'길똥','재밋당',3);
+insert into review values('대공분실, 대한민국 서울',23,'길똥','재밋당',3);
+insert into review values('대공분실, 대한민국 서울',23,'길똥','재밋당',3);
+insert into review values('대공분실, 대한민국 서울',23,'길똥','재밋당',4);
+insert into review values('대공분실, 대한민국 서울',23,'길똥','재밋당',1);
+
+insert into review values('웨스트민스터 지하묘지',23,'길똥','재밋당',5);
+insert into review values('웨스트민스터 지하묘지',23,'길똥','재밋당',4);
+insert into review values('웨스트민스터 지하묘지',23,'길똥','재밋당',4);
+insert into review values('웨스트민스터 지하묘지',23,'길똥','재밋당',5);
+insert into review values('웨스트민스터 지하묘지',23,'길똥','재밋당',5);
+insert into review values('웨스트민스터 지하묘지',23,'길똥','재밋당',5);
+insert into review values('웨스트민스터 지하묘지',23,'길똥','재밋당',4);
+insert into review values('웨스트민스터 지하묘지',23,'길똥','재밋당',3);
+insert into review values('웨스트민스터 지하묘지',23,'길똥','재밋당',3);
+insert into review values('웨스트민스터 지하묘지',23,'길똥','재밋당',5);
+insert into review values('웨스트민스터 지하묘지',23,'길똥','재밋당',5);
+
+insert into review values('산타 캐빈',23,'길똥','재밋당',5);
+insert into review values('산타 캐빈',23,'길똥','재밋당',5);
+insert into review values('산타 캐빈',23,'길똥','재밋당',4);
+insert into review values('산타 캐빈',23,'길똥','재밋당',5);
+insert into review values('산타 캐빈',23,'길똥','재밋당',5);
+insert into review values('산타 캐빈',23,'길똥','재밋당',4);
+insert into review values('산타 캐빈',23,'길똥','재밋당',5);
+insert into review values('산타 캐빈',23,'길똥','재밋당',5);
+insert into review values('산타 캐빈',23,'길똥','재밋당',4);
+insert into review values('산타 캐빈',23,'길똥','재밋당',5);
+insert into review values('산타 캐빈',23,'길똥','재밋당',1);
+
+insert into review values('츠쿠요미 신사',23,'길똥','재밋당',5);
+insert into review values('츠쿠요미 신사',23,'길똥','재밋당',4);
+insert into review values('츠쿠요미 신사',23,'길똥','재밋당',3);
+insert into review values('츠쿠요미 신사',23,'길똥','재밋당',4);
+insert into review values('츠쿠요미 신사',23,'길똥','재밋당',4);
+insert into review values('츠쿠요미 신사',23,'길똥','재밋당',4);
+insert into review values('츠쿠요미 신사',23,'길똥','재밋당',5);
+insert into review values('츠쿠요미 신사',23,'길똥','재밋당',3);
+insert into review values('츠쿠요미 신사',23,'길똥','재밋당',4);
+insert into review values('츠쿠요미 신사',23,'길똥','재밋당',1);
+insert into review values('츠쿠요미 신사',23,'길똥','재밋당',5);
+
+commit;
+
+------------------   TIMES   ------------------
+drop table rsv_times;
+
+create table rsv_times(
+  tmcode varchar2(4) not null,
+  h1 varchar2(5) not null ,
+  h2 varchar2(5),
+  h3 varchar2(5),
+  h4 varchar2(5),
+  h5 varchar2(5),
+  h6 varchar2(5),
+  h7 varchar2(5),
+  h8 varchar2(5),
+  h9 varchar2(5)
+);
+commit;
+
+-------------------  TIMES CONSTRAINT  -------------------
+ALTER TABLE rsv_times
+ADD CONSTRAINT CASC_rsv_times_fk_tmcode
+FOREIGN KEY (tmcode)
+REFERENCES theme(tmcode)
+ON DELETE CASCADE;
+
+--------------------------------------------   TIMES INSERT DATA   ----------------------------------------------------
+
+insert into rsv_times values( 'TM01','11:10', '12:20', '13:30', '14:40', '15:50', '17:00', '18:10', '19:20', '20:30' );
+insert into rsv_times values( 'TM02','11:10', '12:20', '13:30', '14:40', '15:50', '17:00', '18:10', '19:20', '20:30' );
+insert into rsv_times values( 'TM03','11:10', '12:20', '13:30', '14:40', '15:50', '17:00', '18:10', '19:20', '20:30' );
+insert into rsv_times values( 'TM04','10:40', '12:10', '13:40', '15:10', '16:40', '18:10', '19:40', '21:10', '22:40' );
+insert into rsv_times values( 'TM05','10:40', '12:10', '13:40', '15:10', '16:40', '18:10', '19:40', '21:10', '22:40' );
+insert into rsv_times values( 'TM06','10:40', '12:10', '13:40', '15:10', '16:40', '18:10', '19:40', '21:10', '22:40' );
+
+select * from rsv_times;
+commit;
+
+
+
+
+-------------------   RESERVATION   ---------------------
+
+DROP TABLE RESERVATION ;
+
+CREATE table reservation(
+	rscode varchar2(15) PRIMARY KEY, -- '210311-TM01h300'
+	theme varchar2(30) NOT NULL,
+	rsdate DATE NOT NULL,
+	time char(5) NOT NULL, -- '17:30'
+	prsnl	number(2) NOT NULL,
+	name varchar2(20) NOT NULL,
+	phone char(13) NOT NULL, -- '010-0000-0000'
+	price char(7) NOT NULL, -- '999,999'
+	regdate DATE DEFAULT sysdate
+);
+
+COMMIT;
+SELECT * FROM RESERVATION ;
+
+---------------   RESERVATION SEQUENCE   ---------------
+
+DROP SEQUENCE rsv_seq;
+CREATE SEQUENCE rsv_seq 
+INCREMENT BY 1 --증감숫자 1
+START WITH 1 --시작숫자 1
+MINVALUE 1 --최소값 1
+MAXVALUE 99 --최대값 99
+CYCLE; -- 순환
+--------------------------------------   RESERVATION INSERT DATA ---------------------------------------------------
+
+insert into reservation values ('210326-TM01h1'||trim(to_char(rsv_seq.nextval,'00')),									
+  '외과병동, 독일 드레스덴', to_date('2021-03-26','yyyy-mm-dd'), '11:10', 2, '홍길동', '010-0000-0000','40,000', sysdate );									
+insert into reservation values ('210326-TM01h4'||trim(to_char(rsv_seq.nextval,'00')),									
+  '외과병동, 독일 드레스덴', to_date('2021-03-26','yyyy-mm-dd'), '14:40', 3, '구길동', '010-1110-1100','60,000', sysdate );									
+insert into reservation values ('210328-TM01h6'||trim(to_char(rsv_seq.nextval,'00')),									
+  '외과병동, 독일 드레스덴', to_date('2021-03-28','yyyy-mm-dd'), '17:00', 5, '김동길', '010-8888-8888','100,000', sysdate );									
+---------------------------------------------------------------------------------------------------------------------							
+insert into reservation values ('210326-TM02h1'||trim(to_char(rsv_seq.nextval,'00')),									
+  '나이트 마켓', to_date('2021-03-26','yyyy-mm-dd'), '11:10', 3, '김나래', '010-4445-3334','60,000', sysdate );									
+insert into reservation values ('210326-TM02h2'||trim(to_char(rsv_seq.nextval,'00')),									
+  '나이트 마켓', to_date('2021-03-26','yyyy-mm-dd'), '12:20', 4, '고영희', '010-5544-6767','80,000', sysdate );									
+insert into reservation values ('210326-TM02h3'||trim(to_char(rsv_seq.nextval,'00')),									
+  '나이트 마켓', to_date('2021-03-26','yyyy-mm-dd'), '13:30', 4, '강이지', '010-3455-7777','80,000', sysdate );									
+--------------------------------------------------------------------------------------------------------------------							
+insert into reservation values ('210327-TM03h3'||trim(to_char(rsv_seq.nextval,'00')),									
+  '대공분실, 대한민국 서울', to_date('2021-03-27','yyyy-mm-dd'), '13:30', 3, '스프링', '010-1111-4440','60,000', sysdate );									
+insert into reservation values ('210327-TM03h4'||trim(to_char(rsv_seq.nextval,'00')),									
+  '대공분실, 대한민국 서울', to_date('2021-03-27','yyyy-mm-dd'), '14:40', 3, '고독한', '010-3333-8880','60,000', sysdate );									
+insert into reservation values ('210327-TM03h5'||trim(to_char(rsv_seq.nextval,'00')),									
+  '대공분실, 대한민국 서울', to_date('2021-03-27','yyyy-mm-dd'), '15:50', 3, '코드로', '010-4433-7532','60,000', sysdate );									
+--------------------------------------------------------------------------------------------------------------------						
+insert into reservation values ('210516-TM04h1'||trim(to_char(rsv_seq.nextval,'00')),									
+  '웨스트민스터 지하묘지', to_date('2021-05-16','yyyy-mm-dd'), '10:40', 2, '인프라', '010-9223-1122','48,000', sysdate );									
+insert into reservation values ('210326-TM04h4'||trim(to_char(rsv_seq.nextval,'00')),									
+  '웨스트민스터 지하묘지', to_date('2021-03-26','yyyy-mm-dd'), '15:10', 2, '오늘날', '010-9834-1313','48,000', sysdate );									
+insert into reservation values ('210326-TM04h7'||trim(to_char(rsv_seq.nextval,'00')),									
+  '웨스트민스터 지하묘지', to_date('2021-03-26','yyyy-mm-dd'), '21:10', 2, '하부조', '010-9733-1333','48,000', sysdate );									
+--------------------------------------------------------------------------------------------------------------------				
+insert into reservation values ('210326-TM05h1'||trim(to_char(rsv_seq.nextval,'00')),									
+  '산타 캐빈', to_date('2021-03-26','yyyy-mm-dd'), '10:40', 3, '연산자', '010-7226-0000','72,000', sysdate );									
+insert into reservation values ('210326-TM05h3'||trim(to_char(rsv_seq.nextval,'00')),									
+  '산타 캐빈', to_date('2021-03-26','yyyy-mm-dd'), '13:40', 3, '스크립', '010-7557-0000','72,000', sysdate );									
+insert into reservation values ('210326-TM05h4'||trim(to_char(rsv_seq.nextval,'00')),									
+  '산타 캐빈', to_date('2021-03-26','yyyy-mm-dd'), '15:10', 3, '자바추', '010-8444-0000','72,000', sysdate );									
+----------------------------------------------------------------------------------------------------------------------							
+insert into reservation values ('210326-TM06h8'||trim(to_char(rsv_seq.nextval,'00')),									
+ '츠쿠요미 신사', to_date('2021-03-26','yyyy-mm-dd'), '22:40', 5, '지난주', '010-1086-7533','120,000', sysdate );									
+insert into reservation values ('210326-TM06h5'||trim(to_char(rsv_seq.nextval,'00')),									
+ '츠쿠요미 신사', to_date('2021-03-26','yyyy-mm-dd'), '16:40', 5, '저번주', '010-2087-4633','120,000', sysdate );									
+insert into reservation values ('210326-TM06h4'||trim(to_char(rsv_seq.nextval,'00')),									
+ '츠쿠요미 신사', to_date('2021-03-26','yyyy-mm-dd'), '15:10', 5, '그제주', '010-3085-5643','120,000', sysdate );									
+
+COMMIT;
+SELECT * FROM reservation;
+
+------------------------   QnA   ---------------------------
+
+drop  table QnA  ;
+create  table  QnA (      
+	num number primary key,
+	name varchar2(30) not null,
+	pwd varchar2(10) not null,
+	title varchar2(60) not null,
+	wdate date default sysdate,
+	hit number default 0,
+	content varchar2(900)
+); 
+
+-------------------   QnA sequence  ---------------------
+drop sequence QnA_seq;
+CREATE SEQUENCE QnA_SEQ
+START WITH 1
+INCREMENT BY 1;
+
+commit ;
+
+select  *  from  QnA ;
+--------------------------------------   QnA INSERT DATA ---------------------------------------------------
+
+insert  into  QnA   values(QnA_seq.nextval, 'zero', '1234', 'zero', sysdate, 0 , 'a' ) ;
+insert  into  QnA   values(QnA_seq.nextval, 'aaa',  '1234', 'bbb', sysdate, 0 , 'a' ) ;
+insert  into  QnA   values(QnA_seq.nextval, 'zc',  '1234', 'zq', sysdate, 0 , 'z' ) ;
+insert  into  QnA   values(QnA_seq.nextval, 'ac',  '1234',  'wb', sysdate, 0 , 'x' ) ;
+insert  into  QnA   values(QnA_seq.nextval, 'zd',  '1234', 'zee', sysdate, 0 , 'c' ) ;
+insert  into  QnA   values(QnA_seq.nextval, 'ad',  '1234',  'brr', sysdate, 0 , 'v' ) ;
+
+commit;
+
+------------------------  QnA reply  ---------------------------
+create table QnAreply (     
+	replyNum number(6),
+	replyWriter varchar2(30),
+	replyContent varchar2(3000),
+	replyDate date,
+	QnAno number(6) not null
+);
+commit ;
+------------------------  QnA reply sequence ---------------------------
+drop sequence  QnAreply_seq ;
+drop table QnAreply;  
+commit ; 
+
+create sequence  QnAreply_seq 
+start  with  1 
+increment  by  1  ;
+
+-------------------  QnA reply CONSTRAINT  -------------------
+
+alter table QnAreply  add   constraint  QnAno_fk
+foreign key(QnAno) references QnA(num) on delete cascade;
+
+--------------------------------------   QnA reply INSERT DATA ---------------------------------------------------
+insert into QnAreply values(QnAreply_seq.nextval, 'apple', 'apple111', sysdate, 1);
+insert into QnAreply values(QnAreply_seq.nextval, 'php', 'apple222', sysdate, 1);
+insert into QnAreply values(QnAreply_seq.nextval, 'aaa', 'apple333', sysdate, 1);
+commit;

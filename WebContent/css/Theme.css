@@ -1,0 +1,49 @@
+@charset "UTF-8";
+*{padding:0;margin: 0;}
+*:focus{outline: none;}
+a{text-decoration: none; color: white; font-weight: bold; font-size: 18px; background:rgba(0,0,0,0);}
+a:hover{cursor: pointer;}
+.a_theme{ color: white; font-weight: bold; font-size: 18px;}
+.a_review{ color: white; font-weight: bold; font-size: 18px;}
+button{-webkit-appearance: none;-moz-appearance: none;appearance: none; 
+text-align: center; border: none;cursor: pointer; transition: 0.5s;}
+body{background: #222; }
+header{width:100%; height: 50px; background: #222;}
+.section_theme{overflow:hidden; padding:0% 5% 5% 5%; float:left; width: 90%; height: 100%; background: #222;}
+.section_top {padding:0; width:100%; display: flex;  height: 250px; background-size: cover; background-position: center center; background-repeat: no-repeat; }
+.h1_top,.span_top{color:#990000; !improtant; font-family: 'East Sea Dokdo', cursive; font-size: 80px;  font-weight:normal; margin-top:40px; margin-left: -300px;  background:rgba(0,0,0,0);}
+.span_top{font-size: 60px;}
+#wrap{width:1200px; min-width:480px; margin: 0 auto; }
+footer{clear: both; width: 100%; height: 30px; background: #222;}
+/*================================div===============================*/
+.div_top{ width: 30%; padding:0; margin: 0 auto; float:flex; position: relative; background:rgba(0,0,0,0);}
+.div_theme {width:28%; margin : 2%; padding:4px; height:400px; background: #777; !important; float: left;}
+.div_img{width: 100% ;height: 65%;}
+.div_title{width: 100%; height: 8%; margin-top: 5px; background-color:rgba(0,0,0,0);}
+.div_rating {width: 45%; height: 8%; font-size:18px; font-weight:bold; color: white; float: left; background-color:rgba(0,0,0,0);}
+.div_headcount{width: 55%; height: 8%; font-size:18px; font-weight:bold; color: white; float: left; background-color:rgba(0,0,0,0);}
+.div_review{width:45%; height:8%;  float: left; background-color:rgba(0,0,0,0);}
+.div_difficulty{width:55%; height:8%; float: left;  color: white; font-weight: bold; font-size: 18px; background-color:rgba(0,0,0,0);}
+.div_button{width: 100%; height: 11%; float:left; background-color:rgba(0,0,0,0);}
+/*================================img===============================*/
+.img_theme{width: 100%; height: 100%;}
+.img_star{width: 23%; height: 70%; float: left; margin-top: 1px; margin-left: 7px; background-color:rgba(0,0,0,0);}
+.img_man{width: 18%; height: 70%; float: left; margin-top: 3px; background-color:rgba(0,0,0,0);}
+.img_review{width: 25%; height: 80%; float: left; margin-top: 1px; margin-left: 7px; background-color:rgba(0,0,0,0);}
+.img_difficulty{width: 18%; height: 70%; float: left; background-color:rgba(0,0,0,0);}
+/*================================button===============================*/
+.button_content,.button_reservation {font-size: 18px; font-weight: bold; border-radius: 8px;}
+.button_content{font-size: 20px;  background:#222; width: 47%; height: 80%; margin-left: 3px; box-shadow: box-shadow: none;}
+.button_content:hover{color: white; background:#900; box-shadow: 4px 4px 4px 4px black;}
+.button_reservation{font-size: 20px; background:#222; width: 47%; height: 80%; box-shadow: none;}
+.button_reservation:hover{color: white; background:#900;  box-shadow: 4px 4px 4px 4px black;}
+.button_review{border: 0; outline: 0; background:#777777; color: white; font-weight: bold; font-size: 18px; }
+/*================================modal===============================*/
+#modal{position: fixed; top: 0; left: 0; width: 100%; height: 100%; margin: 0 auto; z-index:100;}
+.overlay{position: fixed; top:0% ;left: 0%; background-color:rgba(0,0,0,0.6); width: 100%; height: 100%; z-index: 90;}
+.content{position: fixed; top: 50% ;left: 50%; transform : translate(-50%,-50%);
+width: 500px; height: 350px; z-index: 110; border-radius: 6px; padding: 40px; background-color: #222;
+box-shadow: 0 10px 20px rgba(0,0,0,0.19) , 0 6px 6px rgba(0,0,0,0.23); color:white ; font-size:20px;}
+/*================================media===============================*/
+@media(max-width: 1220px){#wrap{width:100%;} .div_theme{width:45%;} }
+@media(max-width: 900px){#wrap{width:100%;} .div_theme{width:95%;} .content{width :250px; height: 190px;}}
